@@ -15,9 +15,9 @@ The input starts on the left and the 4× output on the right. The divider moves
 from right to left until the output fills the frame.
 The watermark strip is cropped from both views. The output area is not resized;
 the MP4 is 3544×1832 at 24 fps with all 265 frames.
-Watch the comparison in MP4 format:
+<video controls preload="metadata" width="100%" src="https://raw.githubusercontent.com/kopperx/RelayVSR/main/assets/demo/relayvsr-comparison.mp4"></video>
 
-[▶ Watch the input-to-output comparison](assets/demo/relayvsr-comparison.mp4)
+[Download the MP4](assets/demo/relayvsr-comparison.mp4)
 
 ## Setup
 
