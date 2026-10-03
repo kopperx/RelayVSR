@@ -1,4 +1,4 @@
-# RefVSR
+# RelayVSR
 
 Collaborative streaming 4× video super-resolution with sparse Wan references
 and a compact conditional decoder. This repository contains inference code only.
