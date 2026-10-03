@@ -15,7 +15,7 @@ The input starts on the left and the 4× output on the right. The divider moves
 from right to left until the output fills the frame.
 The watermark strip is cropped from both views. The output area is not resized;
 the MP4 is 3544×1832 at 24 fps with all 265 frames.
-https://github.com/user-attachments/assets/937a6084-3a59-4ccb-9a9c-6f0462693186
+<video src="https://github.com/user-attachments/assets/937a6084-3a59-4ccb-9a9c-6f0462693186" controls></video>
 
 [Download the MP4](assets/demo/relayvsr-comparison.mp4)
 
