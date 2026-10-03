@@ -17,7 +17,7 @@ from refvsr_inference.runtime.streaming import CollaborativeFrameStream, InputFr
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="RefVSR 4x video super-resolution")
+    parser = argparse.ArgumentParser(description="RelayVSR 4x video super-resolution")
     project_root = Path(__file__).resolve().parent
     parser.add_argument(
         "--input", type=Path, default=project_root / "assets" / "demo" / "input.mp4",
@@ -57,7 +57,7 @@ def main(args):
         raise FileExistsError(f"Output exists: {args.output}; use --overwrite to replace it.")
     for checkpoint in (args.wan_checkpoint, args.flash_checkpoint):
         if checkpoint.suffix != ".safetensors" or not checkpoint.is_file():
-            raise FileNotFoundError(f"RefVSR checkpoint not found: {checkpoint}")
+            raise FileNotFoundError(f"RelayVSR checkpoint not found: {checkpoint}")
     torch.set_num_threads(args.cpu_threads)
     fps = input_fps(args.input, args.fps)
     device = torch.device(args.device)

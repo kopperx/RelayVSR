@@ -17,7 +17,7 @@ def load_checkpoints(wan_path, flash_path, *, device="cuda", dtype=torch.bfloat1
     with safe_open(str(wan_path), framework="pt", device="cpu") as handle:
         metadata = handle.metadata() or {}
         if metadata.get("format") != "refvsr-wan-v1":
-            raise ValueError("Expected a RefVSR Wan safetensors checkpoint.")
+            raise ValueError("Expected a RelayVSR Wan safetensors checkpoint.")
         wan_config = json.loads(metadata["config"])
         prompt_shape = handle.get_slice("prompt_embeds").get_shape()
         if (
@@ -30,7 +30,7 @@ def load_checkpoints(wan_path, flash_path, *, device="cuda", dtype=torch.bfloat1
     with safe_open(str(flash_path), framework="pt", device="cpu") as handle:
         metadata = handle.metadata() or {}
         if metadata.get("format") != "refvsr-flash-v1":
-            raise ValueError("Expected a RefVSR Flash safetensors checkpoint.")
+            raise ValueError("Expected a RelayVSR Flash safetensors checkpoint.")
         flash_config = json.loads(metadata["config"])
     if (
         flash_config.get("condition_mode") != "endpoints"

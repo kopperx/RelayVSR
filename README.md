@@ -1,7 +1,11 @@
-# RefVSR
+# RelayVSR
 
-Collaborative streaming 4× video super-resolution with sparse Wan references
-and a compact conditional decoder. This repository contains inference code only.
+Inference code for [RelayVSR: Large-Small Model Collaboration for Efficient
+Real-World Video Super-Resolution](https://arxiv.org/abs/2609.37850) by
+Xijun Wang, Xin Li, Zirui Lang, Suhang Yao, Haoran Li, and Zhibo Chen.
+RelayVSR performs collaborative streaming 4× video super-resolution with sparse
+Wan references and a compact conditional decoder. This repository contains
+inference code only.
 
 ## Setup
 
@@ -14,7 +18,7 @@ source .venv/bin/activate
 
 ## Inference
 
-Download the two checkpoints from the anonymous
+Download the two checkpoints from the
 [Hugging Face repository](https://huggingface.co/anonyaa/RelayVSR) into `weights/`:
 
 ```bash
@@ -48,6 +52,20 @@ Video FPS is preserved. Output resolution is exactly 4× the input; audio is not
 copied. Each model loads its own safetensors directly, without runtime adapter
 merging. Both files contain their model configuration; the Wan file also contains
 the prompt embeddings.
+
+## Citation
+
+```bibtex
+@misc{wang2026relayvsr,
+  title={RelayVSR: Large-Small Model Collaboration for Efficient Real-World Video Super-Resolution},
+  author={Xijun Wang and Xin Li and Zirui Lang and Suhang Yao and Haoran Li and Zhibo Chen},
+  year={2026},
+  eprint={2609.37850},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2609.37850}
+}
+```
 
 ## License
 
