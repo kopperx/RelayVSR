@@ -7,6 +7,17 @@ RelayVSR performs collaborative streaming 4× video super-resolution with sparse
 Wan references and a compact conditional decoder. This repository contains
 inference code only.
 
+![RelayVSR overview from the paper](assets/intro-figure.png)
+
+## Demo
+
+The input starts on the left and the 4× output on the right. The divider moves
+from right to left until the output fills the frame.
+The bottom source-video watermark area has been cropped from both views.
+Click the preview to watch the MP4.
+
+[![Input-to-output comparison](assets/demo/relayvsr-comparison.gif)](assets/demo/relayvsr-comparison.mp4)
+
 ## Setup
 
 Linux, Python 3.11–3.13 and an NVIDIA GPU:
@@ -19,10 +30,10 @@ source .venv/bin/activate
 ## Inference
 
 Download the two checkpoints from the
-[Hugging Face repository](https://huggingface.co/anonyaa/RelayVSR) into `weights/`:
+[Hugging Face repository](https://huggingface.co/kopper/RelayVSR) into `weights/`:
 
 ```bash
-uvx hf download anonyaa/RelayVSR flash.safetensors wan.safetensors --local-dir weights
+uvx hf download kopper/RelayVSR flash.safetensors wan.safetensors --local-dir weights
 ```
 
 The expected paths are `weights/wan.safetensors` and
