@@ -1,0 +1,44 @@
+[project]
+name = "refvsr-inference"
+version = "0.1.0"
+description = "Inference-only collaborative reference-guided video super-resolution"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+  "torch>=2.10,<2.11", "diffusers==0.37.1", "accelerate>=1.0,<2",
+  "triton>=3.6,<3.7; sys_platform == 'linux'", "einops>=0.8",
+  "av>=17,<19", "safetensors>=0.6", "numpy>=1.26", "pillow>=10",
+]
+
+[project.optional-dependencies]
+cpu = ["torch==2.10.0"]
+cu128 = ["torch==2.10.0"]
+
+[tool.uv]
+package = false
+conflicts = [[{ extra = "cpu" }, { extra = "cu128" }]]
+environments = ["sys_platform == 'linux'"]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-cu128", extra = "cu128" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
