@@ -13,10 +13,9 @@ inference code only.
 
 The input starts on the left and the 4× output on the right. The divider moves
 from right to left until the output fills the frame.
-The bottom source-video watermark area has been cropped from both views.
-Click the preview to watch the MP4.
+Watch the comparison in MP4 format:
 
-[![Input-to-output comparison](assets/demo/relayvsr-comparison.gif)](assets/demo/relayvsr-comparison.mp4)
+[▶ Watch the input-to-output comparison](assets/demo/relayvsr-comparison.mp4)
 
 ## Setup
 
