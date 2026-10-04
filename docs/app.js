@@ -67,7 +67,7 @@ class MediaPlayer {
     return new Promise((resolve,reject) => {
       const finish = fn => { clearTimeout(timer); video.removeEventListener('loadedmetadata',ok);video.removeEventListener('error',bad);fn(); };
       const ok = () => finish(resolve), bad = () => finish(() => reject(new Error('Media unavailable')));
-      const timer = setTimeout(bad,20000);
+      const timer = setTimeout(bad,90000);
       video.addEventListener('loadedmetadata',ok,{once:true});video.addEventListener('error',bad,{once:true});
     });
   }
