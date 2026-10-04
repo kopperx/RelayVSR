@@ -1,0 +1,38 @@
+{
+  "source": "https://arxiv.org/src/2609.37850v1",
+  "conversion": "Original figure PDFs exported as SVG with glyph outlines and embedded original-resolution images. No page rasterization.",
+  "figures": [
+    {
+      "name": "intro",
+      "width": 1026.2979736328125,
+      "height": 636.7570190429688,
+      "vector_paths": 413,
+      "embedded_images": 12,
+      "svg_bytes": 24801999
+    },
+    {
+      "name": "model",
+      "width": 872.2260131835938,
+      "height": 479.0159912109375,
+      "vector_paths": 339,
+      "embedded_images": 11,
+      "svg_bytes": 726030
+    },
+    {
+      "name": "compare",
+      "width": 2244.661865234375,
+      "height": 1582.2786865234375,
+      "vector_paths": 29,
+      "embedded_images": 77,
+      "svg_bytes": 4900937
+    },
+    {
+      "name": "keyframe_compare2",
+      "width": 2520.0,
+      "height": 856.0,
+      "vector_paths": 6,
+      "embedded_images": 32,
+      "svg_bytes": 9157788
+    }
+  ]
+}
