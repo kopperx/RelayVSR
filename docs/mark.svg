@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">RelayVSR</title>
+  <desc id="desc">Two video frames connected by a relay arrow, representing large-small model collaboration.</desc>
+  <rect width="64" height="64" rx="15" fill="#286fb4"/>
+  <rect x="11" y="15" width="27" height="23" rx="5" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="3"/>
+  <rect x="26" y="27" width="27" height="23" rx="5" fill="#286fb4" stroke="#fff" stroke-width="3"/>
+  <path d="M20 26h13a7 7 0 0 1 7 7v6m-5-5 5 5 5-5" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="19" cy="25.5" r="3" fill="#bde9ff"/>
+</svg>
