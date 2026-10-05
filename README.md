@@ -1,18 +1,22 @@
-# RelayVSR
+<h1 align="center">RelayVSR</h1>
 
-Inference code for [RelayVSR: Large-Small Model Collaboration for Efficient
-Real-World Video Super-Resolution](https://arxiv.org/abs/2609.37850) by
-Xijun Wang, Xin Li, Zirui Lang, Suhang Yao, Haoran Li, and Zhibo Chen.
+<h3 align="center">Large-Small Model Collaboration for Efficient Real-World Video Super-Resolution</h3>
+
+<p align="center">
+  Xijun Wang · Xin Li · Zirui Lang · Suhang Yao · Haoran Li · Zhibo Chen
+</p>
+
+<p align="center">
+  <a href="https://kopperx.github.io/RelayVSR/">Project Page</a> ·
+  <a href="https://arxiv.org/abs/2609.37850">Paper</a> ·
+  <a href="https://huggingface.co/kopper/RelayVSR">Model Weights</a>
+</p>
+
 RelayVSR performs collaborative streaming 4× video super-resolution with sparse
-Wan references and a compact conditional decoder. This repository contains inference code and the project website.
+Wan references and a compact conditional decoder. This repository contains
+inference code and the [project website source](docs/).
 
 ![RelayVSR overview from the paper](assets/intro-figure.png)
-
-## Project page
-
-[View the RelayVSR project page](https://kopperx.github.io/RelayVSR/) for the paper,
-method, visual results, and interactive comparisons. The website source is in
-[`docs/`](docs/); its videos load from Hugging Face.
 
 ## Demo
 
