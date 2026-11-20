@@ -14,6 +14,12 @@ from PIL import Image
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".bmp", ".tif", ".tiff"}
 
 
+def _video_stream(container):
+    if not container.streams.video:
+        raise ValueError("Input has no video stream.")
+    return container.streams.video[0]
+
+
 def input_fps(path, override=None):
     if override is not None:
         fps = Fraction(str(override))
@@ -22,9 +28,7 @@ def input_fps(path, override=None):
         if path.is_dir() or path.suffix.lower() in IMAGE_SUFFIXES:
             raise ValueError("Image inputs require --fps, for example --fps 24.")
         with av.open(str(path)) as container:
-            if not container.streams.video:
-                raise ValueError("Input has no video stream.")
-            fps = container.streams.video[0].average_rate
+            fps = _video_stream(container).average_rate
             if fps is None:
                 raise ValueError("Video frame rate is unavailable; specify --fps.")
     if fps <= 0:
@@ -51,7 +55,7 @@ def iter_frames(path, *, max_frames=None, start_frame=0):
 
     def video():
         with av.open(str(path)) as container:
-            stream = container.streams.video[0]
+            stream = _video_stream(container)
             stream.codec_context.thread_count = 1
             for frame in container.decode(stream):
                 yield frame.to_ndarray(format="rgb24")
